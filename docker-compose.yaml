@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  proxy:
+    image: traefik:1.7.0-alpine
+    command: --api --docker --docker.domain=rh-dev.eu
+    ports:
+      - '80:80'
+      - '8000:80'
+      - '8080:8080'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - regiohelden
+    restart: unless-stopped
+
+networks:
+  regiohelden:
+    name: rh-dev.eu
+    ipam:
+      config:
+        - subnet: 10.199.0.0/16        
