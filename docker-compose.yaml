@@ -7,12 +7,14 @@ services:
     ports:
       - '80:80'
       - '8000:80'
+      - '8001:80'
+      #  traefik dashbord
       - '8080:8080'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - regiohelden
-    restart: unless-stopped
+    restart: always
 
 networks:
   regiohelden:
