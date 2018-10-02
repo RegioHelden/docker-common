@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   proxy:
-    image: traefik:1.7.0-alpine
+    image: traefik:1.7.1-alpine
     command: --api --docker --docker.domain=rh-dev.eu
     ports:
       - '80:80'
