@@ -14,3 +14,5 @@ alias djpip='dcr --entrypoint "bash -c \"which pipenv && pipenv lock || pip-comp
 # can be used for interactive debugging if you stop the "django" service with `dc stop django`
 # beforehand
 alias djrs='docker-compose run --rm django runserver 0:8000'
+
+alias dcdb='dce db psql app'
