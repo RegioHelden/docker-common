@@ -1,8 +1,11 @@
+# common docker-compose aliases
 alias dc=docker-compose
 alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm --label traefik.enable=False'
 alias dcb='docker-compose build'
 
+
+# django aliases
 alias djs='dcr django shell_plus'
 alias djm='dcr django migrate'
 alias djmm='dcr django makemigrations'
@@ -13,8 +16,13 @@ alias djpip='dcr --entrypoint "bash -c \"which pipenv && pipenv lock || pip-comp
 # unlike the aliases above, this will make the running process accessible via the proxy, so this
 # can be used for interactive debugging if you stop the "django" service with `dc stop django`
 # beforehand
-alias djrs='docker-compose run --rm django runserver 0:8000'
+alias djrs='docker-compose run --rm --use-aliases django runserver 0:8000'
 
+
+# postgres aliases
 alias dcdb='dce db psql app'
 
-alias dcng='dcr angular run-script ng'
+
+# angular aliases
+alias dang='dcr angular run-script ng'
+alias dai='dcr angular run-script i18n'
