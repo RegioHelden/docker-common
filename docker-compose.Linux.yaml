@@ -12,3 +12,10 @@ services:
       - 'traefik.enable=False'
     networks: []
     restart: always
+
+networks:
+  regiohelden:
+    name: rh-dev.eu
+    ipam:
+      config:
+        - subnet: 10.199.0.0/16
