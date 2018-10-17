@@ -16,3 +16,5 @@ alias djpip='dcr --entrypoint "bash -c \"which pipenv && pipenv lock || pip-comp
 alias djrs='docker-compose run --rm django runserver 0:8000'
 
 alias dcdb='dce db psql app'
+
+alias dcng='dcr angular run-script ng'
