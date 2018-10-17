@@ -24,5 +24,7 @@ alias dcdb='dce db psql app'
 
 
 # angular aliases
-alias dang='dcr angular run-script ng'
-alias dai='dcr angular run-script i18n'
+alias ng='dcr angular run-script ng'
+alias ngg='dcr angular npm run-script ng g -- --spec=false'
+alias ngl='dcr angular npm run-script ng lint --'
+alias ngi='dcr angular npm run-script i18n'
