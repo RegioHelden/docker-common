@@ -20,7 +20,7 @@ alias djrs='docker-compose run --rm --use-aliases django runserver 0:8000'
 
 
 # postgres aliases
-alias dcdb='dce db psql app'
+alias dcdb='dce db psql -Uapp app'
 
 
 # angular aliases
