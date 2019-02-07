@@ -25,7 +25,10 @@ alias dcdb='dce db psql -Uapp app'
 
 
 # angular aliases
+function _ngg () {
+    dcr angular run-script -- ng g "$@" --spec=false
+}
 alias ng='dcr angular run-script ng'
-alias ngg='dcr angular run-script ng g -- --spec=false'
+alias ngg='_ngg'
 alias ngl='dcr angular run-script ng lint --'
 alias ngi='dcr angular run-script i18n'
