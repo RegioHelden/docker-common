@@ -14,6 +14,7 @@ alias djt='dcr -e DJANGO_CONFIGURATION=Test django test --no-input --parallel=$(
 alias djrc='dcr --entrypoint=celery django worker -A $(basename $(pwd))'
 alias djpip='dcr --entrypoint "bash -c \"which pipenv && pipenv lock || pip-compile\"" django && dcb'
 alias djdocs='docker-compose run --rm --entrypoint "bash -c" django "cd docs && make html -s"'
+alias djl='dcr --entrypoint="pylint --rcfile=pylintrc -j`nproc`" django --'
 # unlike the aliases above, this will make the running process accessible via the proxy, so this
 # can be used for interactive debugging if you stop the "django" service with `dc stop django`
 # beforehand
