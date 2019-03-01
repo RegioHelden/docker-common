@@ -2,7 +2,7 @@
 alias dc=docker-compose
 alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm --label traefik.enable=False'
-alias dcb='docker-compose build'
+alias dcb='docker-compose build --pull'
 
 
 # django aliases
