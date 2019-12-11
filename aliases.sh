@@ -16,7 +16,7 @@ alias djpip='dcr --entrypoint "bash -c \"which pipenv && pipenv lock || pip-comp
 # unlike the aliases above, this will make the running process accessible via the proxy, so this
 # can be used for interactive debugging if you stop the "django" service with `dc stop django`
 # beforehand
-alias djrs='docker-compose run --rm --use-aliases django runserver 0:8000'
+alias djrs='docker-compose run --rm --use-aliases django runserver_plus --cert-file deploy/wc_rh-dev.eu_merged.crt --key-file deploy/wc_rh-dev.eu_merged.key'
 
 
 # postgres aliases
