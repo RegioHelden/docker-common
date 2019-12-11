@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   etchosts:
-    image: costela/docker-etchosts
+    image: costela/docker-etchosts:0.1.4
     environment:
       - 'ETCHOSTS_LOG_LEVEL=info'
     volumes:
