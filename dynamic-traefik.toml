@@ -1,0 +1,4 @@
+[http.middlewares]
+  [http.middlewares.rh-redirectscheme.redirectScheme]
+    scheme = "https"
+    port = "8000"

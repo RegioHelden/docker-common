@@ -1,0 +1,16 @@
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+
+  [entryPoints.web-secure]
+    address = ":443"
+
+[api]
+    dashboard = true
+    insecure = true
+    debug = true
+
+[providers]
+  [providers.docker]
+  [providers.file]
+    filename = "/dynamic-traefik.toml"
